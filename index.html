@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Colores de la Danza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #d63384;
+      --background: #fff0f5;
+      --text: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: var(--accent);
+      color: white;
+      padding: 2rem 1rem 1.5rem;
+      width: 100%;
+    }
+
+    header h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    header h2 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+      color: #2c2c2c;
+    }
+
+    main {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      max-width: 100%;
+      height: calc(100vh - 200px);
+      padding: 2rem 1rem 4rem;
+      background-color: #fffdfd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    main::after {
+      content: "";
+      background: url('A.png') no-repeat;
+      background-size: 320px;
+      opacity: 0.5;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 320px;
+      height: 320px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    button {
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      background-color: var(--accent);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a62062;
+    }
+
+    section {
+      display: none;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    ul, ol {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .back {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .back button {
+      background: none;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 2rem 1rem;
+      color: white;
+      background-color: #000;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #bailarinas{
+        text-align: center;
+    }
+
+    .sectionTitle{
+        margin-bottom: 15px;
+    }
+
+    .sectionSubtitle{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    li{
+        margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>ARTE EN MOVIMIENTO</h2>
+    <h1>Los Colores de la Danza</h1>
+    <h2>9 de Julio 2025 · 16.00 hs · Cine Teatro Helios</h2>
+  </header>
+
+  <main>
+    <div class="button-group" id="homeButtons">
+      <button onclick="showSection('bailarinas')">Ver Bailarinas</button>
+      <button onclick="showSection('programa')">Ver Programa</button>
+<button onclick="location.href='programa.html'">Versión Imprimible</button>
+    </div>
+
+    <section id="bailarinas">
+      <h3 class="sectionTitle">Bailarinas</h3>
+      <p>Catalina Acosta - Francina Acosta - Alma Ali Santoro - Juana Amat - Briana A. M. Arenas - Malena Lola Baccin - Sofia Antonella Ballester - Lola Barrera - Trinidad Barrera - Fiamma Martina Bellanno - Florencia Bianchi - Sofia Belen Bianchi - Luciana Ailen Cabral - Catalina Cañete - Florencia Ayelen Carri - Candela Castagnola - Ursula Paz De Muner - Clara De Sousa Grade - Maria Victoria Denis - Fiorella Agostina Dicerbo - Aldana Fernandez - Brenda Ferraro - Mayra Lourdes Figueredo - Isabella Finelli - Sol Frisardi - Agostina Galarza - Soledad Galera - Abril Gauna Cedrez - Sophia F. Giordano - Lola Gonzalez Diaz  - Ainoa Gonzalez Selva - Sofia Gorelik - Mora Jazmin Indavera - Aurora Ituarte Agoni - Julieta Juszkiewicz - Emma Xiomara Lagraña - Luciana Lascano - Jazmin Lavalle - Lourdes Lopez Esoinar - Brunella Maidana - Marina Masoucos - Paloma L. Montesinos - Guadalupe Lucia Moral - Julieta Moro - Romina S. Ojeda - Jazmin Perez - Camila Oriana Pisapia - Abril Polsak - Maria Micaela Pouch Beccan - Lourdes Rivero - Juana Rodriguez Alcoceba - Delfina Rodriguez Mini - Alba Rojas - Ludmila Roman Vega - Indira Sanchez Risso - Mariel Scamporrino - Lourdes Isabella Sculli - Yazmin Serna - Martina Sosa Sanchez - Isabella Speranza - Paula Szulczuk - Olivia Jazmin Tapia - Bianca Tegli - Iara Morena Tilven Villan - Ivana Tursi - Viktoria Vega - Milagros Vergara - Mia Vigo Selva - Julia Villella
+        </p>
+        <p class="sectionSubtitle" style="font-weight: bold; margin-top: 15px;">Profesoras: Camila Pisapia, Paloma Montesinos,
+Abril Polsak, Briana Arenas</p>
+        <h4 class="sectionSubtitle">Asistente de Dirección: Abril Polsak</h4>
+        <h3 class="sectionSubtitle">Direccion General : Alejandra Soto</h3>
+      <div class="back"><button onclick="goHome()">Volver</button></div>
+    </section>
+
+    <section id="programa">
+      <h3 style="text-align: center;">Programa</h3>
+        <ol>
+        <li><strong>Colores en el Viento</strong> – Canto<br>Prof. Abril Polsak</li>
+        <li><strong>Experience</strong> – Lyrical Jazz<br>Prof. Briana Arenas</li>
+        <li><strong>Por Amor Baje al Infierno</strong> – Heels<br>Prof. Briana Arenas</li>
+        <li><strong>Poker Face</strong> – Jazz Infantil<br>Prof. Abril Polsak</li>
+        <li><strong>Abracadabra</strong> – Jazz Adolescente<br>Prof. Abril Polsak</li>
+        <li><strong>Ven Conmigo</strong> – Urbano Juvenil<br>Prof. Paloma Montesinos</li>
+        <li><strong>Tu Novia</strong> – Urbano<br>Prof. Camila Pisapia e invitadas</li>
+        <li><strong>Margarita</strong> – Iniciación a la Danza<br>Prof. Paloma Montesinos</li>
+        <li><strong>Power</strong> – Jazz Juvenil<br>Prof. Abril Polsak</li>
+        <li><strong>War of Hearts</strong> – Jazz Preadolescente<br>Prof. Abril Polsak</li>
+        <li><strong>Bring Me to Life</strong> – Lyrical Jazz<br>Prof. Briana Arenas</li>
+        <li><strong>La Playlist</strong> – Urbano Infantil<br>Prof. Camila Pisapia</li>
+        <li><strong>El Fin de los Tiempos</strong> – Urbano Adolescente<br>Prof. Paloma Montesinos</li>
+        <li><strong>Running</strong> – Taller Lyrical Jazz<br>Prof. Abril Polsak</li>
+        <li><strong>The End of Love</strong><br>Paloma Montesinos y Abril Polsak</li>
+        <li><strong>Mama y Yo</strong></li>
+        <li><strong>Saludo Final - Todos los grupos</strong></li>
+        </ol>
+      <div class="back"><button onclick="goHome()">Volver</button></div>
+    </section>
+  </main>
+
+  <footer>
+    Arte en Movimiento
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('homeButtons').style.display = 'none';
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function goHome() {
+      document.getElementById('homeButtons').style.display = 'flex';
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
